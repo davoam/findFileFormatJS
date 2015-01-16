@@ -1,5 +1,5 @@
 # FindFileFormatJs
-Library helps to determine the format of a file, even if the file witout extenstion.
+Library helps to determine the format of a file, even if the file witout formats.
 Supported extensions: jpg, gif, png
 #Usage
 To use library you need to add findFileFormat.js to your project
