@@ -1,4 +1,4 @@
-var fileExtDeterminer = (function() {
+var fff = (function() {
 
   var types = {
     "1196314761": "png",
@@ -7,13 +7,14 @@ var fileExtDeterminer = (function() {
     "-520103681": "jpg",
   }
 
-  var fileExtDeterminer = {
+  var fff = {
     successHandler: null,
     errorHandler: null,
-    detect: function(file, successHandler, errorHandler) {
+    find: function(file, successHandler, errorHandler) {
         
         if (!(file instanceof File)) {
-          console.error("the first argument in detect function should be instance of File")
+          console.error("the first argument in detect function should be instance of File");
+          return false;
         }  
 
         var fr = new FileReader();
@@ -26,7 +27,7 @@ var fileExtDeterminer = (function() {
           var int32View = new Int32Array(buffer);
           var type = types[int32View[0]];
           
-          if (self.successHandler && type) {
+          if (self.successHandler && type ) {
             self.successHandler(type);
           }
           if (self.errorHandler && !type) {
@@ -37,6 +38,6 @@ var fileExtDeterminer = (function() {
     }
   }
 
-  return fileExtDeterminer;
+  return fff;
 
 })();

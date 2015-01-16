@@ -1,7 +1,8 @@
-# fileExtDeterminer.js
-Library helps to determine the extension of a file. Supported extensions: jpg, gif, bmp, png
+# FindFileFormatJs
+Library helps to determine the format of a file, even if the file witout extenstion.
+Supported extensions: jpg, gif, png
 #Usage
-To use library you need to add fileExtDeterminer.js to your project
+To use library you need to add findFileFormat.js to your project
 #Simple example
 
 ```html
@@ -11,10 +12,10 @@ To use library you need to add fileExtDeterminer.js to your project
 </head>
     <body>
     <input type="file" onchange="processFile(this)">
-    <script type="text/javascript" src="fileExtDeterminer.min.js"></script>
+    <script type="text/javascript" src="findFileFormat.js"></script>
     <script>
        function processFile(e) {
-        fileExtDeterminer.detect(e.files[0],
+        fff.find(e.files[0],
             function(type) {
                 alert("The type of file is " + type);
             },
