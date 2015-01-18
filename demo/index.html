@@ -8,7 +8,7 @@
         <script type="text/javascript" src="findFileFormat.js"></script>
     </div>
     <script>
-       function processFile(e) {
+    function processFile(e) {
         fff.find(e.files[0],
             function(format) {
                 alert("The format of the file is " + format);
@@ -17,7 +17,7 @@
                 alert("can not determine file format")
             }
         )
-       } 
+    } 
     </script>   
     </body>
 </html>

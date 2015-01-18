@@ -14,16 +14,16 @@ To use library you need to add findFileFormat.js to your project
     <input type="file" onchange="processFile(this)">
     <script type="text/javascript" src="findFileFormat.js"></script>
     <script>
-       function processFile(e) {
+    function processFile(e) {
         fff.find(e.files[0],
-            function(type) {
-                alert("The type of file is " + type);
+            function(format) {
+                alert("The format of the file is " + format);
             },
             function() {
-                alert("can not determine file type")
+                alert("can not determine file format")
             }
         )
-       } 
+    } 
     </script>   
     </body>
 </html>
