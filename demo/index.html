@@ -3,8 +3,10 @@
     <meta charset="UTF-8">
 </head>
     <body>
-    <input type="file" onchange="processFile(this)">
-    <script type="text/javascript" src="findFileFormat.js"></script>
+    <div style="width: 320px; margin: 0 auto">
+        <input type="file" onchange="processFile(this)">
+        <script type="text/javascript" src="findFileFormat.js"></script>
+    </div>
     <script>
        function processFile(e) {
         fff.find(e.files[0],

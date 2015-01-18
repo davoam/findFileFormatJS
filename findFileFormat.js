@@ -4,7 +4,8 @@ var fff = (function() {
   var types = {
     "1196314761": "png",
     "944130375": "gif",
-    "-520103681": "jpg"
+    "-520103681": "jpg",
+    "1178882085": "pdf"
   };
 
   var fff = {
@@ -25,7 +26,7 @@ var fff = (function() {
             var buffer = e.currentTarget.result;
             var int32View = new Int32Array(buffer);
             var format = types[int32View[0]];
-          
+            
             if (self.successHandler && format) {
               self.successHandler(format);
             }
